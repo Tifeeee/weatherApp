@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(images/pexels-ben-mack-5707721.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.cardbody {
+    height: 350px;
+    border: 2px solid white;
+    width: 300px;
+    margin: 50px auto 0;
+    padding: 30px;
+    margin-top: 100px;
+    background-color: white;
+    background: linear-gradient(to right, teal, gray);
+    box-shadow: 4px 4px 4px grey;
+    border-radius: 50px;
+
+}
+
+h3{
+    text-align: center;
+    margin-top: -30px ;
+    color: aqua;
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: underline;
+ } 
+
+ .weather-info{
+    margin-top: 30px;
+ }
+
+.Humidity{
+margin-top: 50px;
+color: white;
+margin-top: 20px;
+font-size: 20px;
+font-weight: bolder;
+
+
+}
+.Description {
+    align-items: center;
+    margin-right: 30px;
+    font-weight: bolder;
+    color: white; 
+    font-size: 20px;
+    margin-top: 20px;
+    
+    
+}
+
+.Temperature{
+    font-size: 30px;
+    margin-top: -60px;
+    color: white;
+    margin-left: 25px;
+
+}
+
+
+#checkWeather{
+    height: 50px;
+    background-color: white;
+    border-radius: 90px;
+    margin-left: 580px;
+    width: 200px;
+    transform: translateY(50px);
+    font-weight: bolder;
+    color: teal;
+    border-style: double;
+    box-shadow: 2px 2px 2px grey;
+
+
+}
+
+.cloud{
+    margin-left: 140px;
+    height: 100px;
+    margin-top: 20px;
+
+}

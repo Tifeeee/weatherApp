@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="checkWeather()" id="checkWeather">Check Weather Details</button>
+    <div id="weatherDetails"></div>
+
+
+    <script>
+        const checkWeather = async () => {
+            let apiKey = '2d2e02b1a8c7642c75e133a556ca6be5';
+            let city = 'Ogbomoso';
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+            let response = await fetch(url);
+            let weatherDetails = await response.json();
+            displayWeather(weatherDetails);
+            console.log(weatherDetails);
+        }
+
+        const displayWeather = (weatherData) => {
+            const weatherDiv = document.getElementById('weatherDetails');
+            const temperature = (weatherData.main.temp - 273.15).toFixed(2); 
+            const humidity = weatherData.main.humidity;
+            const weatherDescription = weatherData.weather[0].description;
+
+            weatherDiv.innerHTML = `
+            
+    <div class='cardbody'>
+        <div class='weather-info'>
+        <h3>Weather App for Ogbomoso</h3>
+           <img  class= "cloud" src="images/cloud.png"></img>
+             <div class="Temperature">
+                Temp: <br> ${temperature}°C 
+            </div>
+            <div class='Humidity'>
+                Humidity: ${humidity}%
+            </div>
+            <div class='Description'>
+                Description: ${weatherDescription}
+            </div>
+        </div>
+    </div>`;
+}
+    </script>
+</body>
+</html>
